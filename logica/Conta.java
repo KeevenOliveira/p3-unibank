@@ -1,8 +1,8 @@
 package logica;
 
-public class Conta {
-    private int numConta;
-    private double saldo;
+public abstract class Conta {
+    protected int numConta;
+    protected double saldo;
 
     public Conta(int numero) {
         this.numConta = numero;
@@ -10,7 +10,7 @@ public class Conta {
     }
 
     public int getNumero() {
-        return numConta;
+        return this.numConta;
     }
 
     public void depositar(double valor) {
@@ -18,7 +18,10 @@ public class Conta {
     }
 
     public double getSaldo() {
-        return saldo;
+        return this.saldo;
+    }
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public void sacar(double valor) {
